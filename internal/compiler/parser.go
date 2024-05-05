@@ -23,7 +23,7 @@ func (p *ParserSimple) ParseStatement() {
 		token := p.lexer.NextToken()
 		p.tokens = append(p.tokens, token)
 
-		if token.tt == TokenEOF {
+		if token.Type == TokenEOF {
 			break
 		}
 	}
